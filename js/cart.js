@@ -8,7 +8,7 @@ const vm = new Vue({
         checkAllFlag: false,
         totalMoney: 0,
         delFlag: false,
-        currentProduct:''
+        currentProduct:{}
     },
     filters: {
         formatMoney: (value)=>{
