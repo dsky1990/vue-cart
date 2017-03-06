@@ -95,9 +95,9 @@
     bottom: 20px;
     left: 20px;
     color: #EE7A23; }
-.addr-list li .addr-set-default {
-  display: none;
-}
+/*.addr-list li .addr-set-default {*/
+  /*display: none;*/
+/*}*/
   .addr-list li:nth-child(4n) {
     margin-right: 0; }
   .addr-list li:hover {
