@@ -15,6 +15,11 @@
 - 作用域问题
 
 在函数运行时，this指向的是上下文作用域，在vux中，默认指向的是new的vue对象
+
+>注意，不应该使用箭头函数来定义计算属性函数computed (例如 aDouble: () => this.a * 2)。理由是箭头函数绑定了父级作用域的上下文，所以 this 将不会按照期望指向 Vue 实例，this.a 将是 undefined。
+
+>注意，不应该使用箭头函数来定义 method 函数 (例如 plus: () => this.a++)。理由是箭头函数绑定了父级作用域的上下文，所以 this 将不会按照期望指向 Vue 实例，this.a 将是 undefined。
+
 ```js
 // 这个时候this就指的vm
 const vm = new Vue({
