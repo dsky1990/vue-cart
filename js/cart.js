@@ -8,7 +8,7 @@ const vm = new Vue({
         checkAllFlag: false,
         totalMoney: 0,
         delFlag: false,
-        currentProduct:{}
+        currentIndex:''
     },
     filters: {
         formatMoney: (value)=>{
@@ -64,13 +64,12 @@ const vm = new Vue({
                 }
             });
         },
-        delConfirm: (product)=>{
+        delConfirm: (index)=>{
             vm.delFlag = true;
-            vm.currentProduct = product;
+            vm.currentIndex = index;
         },
         delProduct: ()=>{
-            const productIndex = vm.productList.indexOf(vm.currentProduct);
-            vm.productList.splice(productIndex, 1);
+            vm.productList.splice(vm.currentIndex, 1);
             vm.delFlag = false;
         }
     }

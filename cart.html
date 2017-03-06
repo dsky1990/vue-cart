@@ -63,7 +63,7 @@
                             </ul>
                         </div>
                         <ul class="cart-item-list">
-                            <li v-for="item in productList">
+                            <li v-for="(item, index) in productList">
                                 <div class="cart-tab-1">
                                     <!-- 单选 -->
                                     <div class="cart-item-check">
@@ -111,7 +111,7 @@
                                 <!-- 删除功能 -->
                                 <div class="cart-tab-5">
                                     <div class="cart-item-opration">
-                                        <a href="javascript:;" class="item-edit-btn" @click="delConfirm(item)">
+                                        <a href="javascript:;" class="item-edit-btn" @click="delConfirm(index)">
                                             <svg class="icon icon-del"><use xlink:href="#icon-del"></use></svg>
                                         </a>
                                     </div>
